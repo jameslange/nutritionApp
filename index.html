@@ -16,108 +16,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body width="100%" height="100%">
-    <!-- <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header> -->
     <main class="d-flex flex-column align-items-center h-100">
-      <!-- d-flex
-    flex-column
-    justify-content-center
-    align-items-center
-    position-relative -->
-      <section
-        class="container d-flex flex-column align-items-center vh-100 vw-100"
-      >
+      <section class="container d-flex flex-column align-items-center vh-100 vw-100">
         <div class="d-flex flex-column align-items-center p-2 rounded">
           <form
             id="myForm"
             class="form-inline d-flex rounded flex-column my-lg-0 align-items-center border border-3 border-dark"
           >
             <h2 class="p-3">Find your new favorite recipe</h2>
-            <input
-              class="form-control mb-2 w-75"
-              type="search"
-              aria-label="Search"
-              id="userInput"
-            />
-            <button
-              id="myBtn"
-              class="btn btn-outline-success w-25 my-2"
-              type="submit"
-            >
+            <input class="form-control mb-2 w-75" type="search" aria-label="Search" id="userInput" />
+            <button id="myBtn" class="btn btn-outline-success w-25 my-2" type="submit">
               <strong>Search</strong>
             </button>
           </form>
-          <h5
-            id="learnMore"
-            class="p-3 mt-2 border border-2 border-dark d-none"
-          >
+          <h5 id="learnMore" class="p-3 mt-2 border border-2 border-dark d-none">
             <strong>Pick a recipe to find out more!</strong>
           </h5>
         </div>
         <!--Controls-->
-        <div
-          id="carouselControls"
-          class="controls-top d-none d-flex justify-content-center pb-3"
-        >
-          <a
-            class="btn-floating bg-dark"
-            href="#multi-item-example"
-            data-slide="prev"
+        <div id="carouselControls" class="controls-top d-none d-flex justify-content-center pb-3">
+          <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="prev"
             ><i class="bi bi-chevron-compact-left"></i
           ></a>
-          <a
-            class="btn-floating bg-dark"
-            href="#multi-item-example"
-            data-slide="next"
+          <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="next"
             ><i class="bi bi-chevron-compact-right"></i
           ></a>
         </div>
@@ -170,13 +91,8 @@
                 <h1 class="nutrition-facts border-b">Nutrition Facts</h1>
                 <div class="servings"></div>
                 <div class="nutrition-row">
-                  <div class="nutrition-column text-md text-bold">
-                    Serving size
-                  </div>
-                  <div
-                    id="servingSize"
-                    class="nutrition-column text-md text-bold text-right"
-                  ></div>
+                  <div class="nutrition-column text-md text-bold">Serving size</div>
+                  <div id="servingSize" class="nutrition-column text-md text-bold text-right"></div>
                 </div>
               </header>
               <div class="nutrition-row border-b-md">
@@ -184,33 +100,22 @@
                   <div class="text-sm">Amount per serving</div>
                   <div class="calories">Calories</div>
                 </div>
-                <div
-                  id="caloriesPerServing"
-                  class="nutrition-column calories amount align-bottom text-right"
-                ></div>
+                <div id="caloriesPerServing" class="nutrition-column calories amount align-bottom text-right"></div>
               </div>
               <div class="nutrition-row border-b">
-                <div class="nutrition-column text-right text-bold text-sm">
-                  % Daily Value *
-                </div>
+                <div class="nutrition-column text-right text-bold text-sm">% Daily Value *</div>
               </div>
               <div id="beginHere" class="nutrition-row border-b">
                 <div id="fatContent" class="nutrition-column">
                   <!-- <span class="text-bold"></span> -->
                 </div>
-                <div
-                  id="dailyFatPercentage"
-                  class="nutrition-column text-bold text-right"
-                ></div>
+                <div id="dailyFatPercentage" class="nutrition-column text-bold text-right"></div>
               </div>
               <div class="nutrition-row border-b">
                 <div class="nutrition-column">
                   <span id="saturatedFat" class="text-indent"></span>
                 </div>
-                <div
-                  id="dailySFatPercentage"
-                  class="nutrition-column text-bold text-right"
-                ></div>
+                <div id="dailySFatPercentage" class="nutrition-column text-bold text-right"></div>
               </div>
               <div class="nutrition-row border-b">
                 <div class="nutrition-column">
@@ -222,37 +127,25 @@
                 <div class="nutrition-column">
                   <span id="cholesterol" class="text-bold"></span>
                 </div>
-                <div
-                  id="cholesterolPercentage"
-                  class="nutrition-column text-bold text-right"
-                ></div>
+                <div id="cholesterolPercentage" class="nutrition-column text-bold text-right"></div>
               </div>
               <div class="nutrition-row border-b">
                 <div class="nutrition-column">
                   <span id="sodium" class="text-bold"></span>
                 </div>
-                <div
-                  id="sodiumPercentage"
-                  class="nutrition-column text-bold text-right"
-                ></div>
+                <div id="sodiumPercentage" class="nutrition-column text-bold text-right"></div>
               </div>
               <div class="nutrition-row border-b">
                 <div class="nutrition-column">
                   <span id="carbs" class="text-bold"></span>
                 </div>
-                <div
-                  id="carbsPercentage"
-                  class="nutrition-column text-bold text-right"
-                ></div>
+                <div id="carbsPercentage" class="nutrition-column text-bold text-right"></div>
               </div>
               <div class="nutrition-row border-b">
                 <div class="nutrition-column">
                   <span id="fiber" class="text-indent"></span>
                 </div>
-                <div
-                  id="fiberPercentage"
-                  class="nutrition-column text-bold text-right"
-                ></div>
+                <div id="fiberPercentage" class="nutrition-column text-bold text-right"></div>
               </div>
               <div class="nutrition-row">
                 <div class="nutrition-column">
@@ -268,45 +161,29 @@
                 <div class="nutrition-column">
                   <span id="protein" class="text-bold"></span>
                 </div>
-                <div
-                  id="proteinPercentage"
-                  class="nutrition-column text-bold text-right"
-                ></div>
+                <div id="proteinPercentage" class="nutrition-column text-bold text-right"></div>
               </div>
               <div class="nutrition-row border-b">
                 <div id="vitaminD" class="nutrition-column"></div>
-                <div
-                  id="vitaminDPercentage"
-                  class="nutrition-column text-right"
-                ></div>
+                <div id="vitaminDPercentage" class="nutrition-column text-right"></div>
               </div>
               <div class="nutrition-row border-b">
                 <div id="calcium" class="nutrition-column"></div>
-                <div
-                  id="calciumPercentage"
-                  class="nutrition-column text-right"
-                ></div>
+                <div id="calciumPercentage" class="nutrition-column text-right"></div>
               </div>
               <div class="nutrition-row border-b">
                 <div id="iron" class="nutrition-column"></div>
-                <div
-                  id="ironPercentage"
-                  class="nutrition-column text-right"
-                ></div>
+                <div id="ironPercentage" class="nutrition-column text-right"></div>
               </div>
               <div class="nutrition-row border-b-md">
                 <div id="potassium" class="nutrition-column"></div>
-                <div
-                  id="potassiumPercentage"
-                  class="nutrition-column text-right"
-                ></div>
+                <div id="potassiumPercentage" class="nutrition-column text-right"></div>
               </div>
               <footer class="nutrition-footer">
                 <div class="asteric">*</div>
                 <div class="footnote">
-                  The % Daily Value (DV) tells you how much a nutrient in a
-                  serving of food contributes to a daily diet. 2,000 calories a
-                  day is used for general nutrition advice.
+                  The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet.
+                  2,000 calories a day is used for general nutrition advice.
                 </div>
               </footer>
             </section>
@@ -319,20 +196,9 @@
             <aside id="ingredientsList" class="mt-5 p-3">
               <ul class="" id="prepInstructions"></ul>
             </aside>
-            <div
-              class="backgroundColorDiv d-flex flex-column align-items-center p-3"
-            >
-              <p>
-                Does this recipe tickle your fancy? Head over to the website to
-                check out the instructions!
-              </p>
-              <button
-                id="recipeSiteBtn"
-                class="btn bg-success w-25 my-2"
-                type="submit"
-              >
-                Instructions!
-              </button>
+            <div class="backgroundColorDiv d-flex flex-column align-items-center p-3">
+              <p>Does this recipe tickle your fancy? Head over to the website to check out the instructions!</p>
+              <button id="recipeSiteBtn" class="btn bg-success w-25 my-2" type="submit">Instructions!</button>
             </div>
           </div>
         </div>

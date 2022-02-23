@@ -3,22 +3,22 @@
 
 :root {
   --main-color: rgb(230, 150, 45);
-  --webKitBoxShadow: 0px 0px 0px 5px #a0a0a0, inset 0px 10px 27px -8px #141414,
-    inset 0px -10px 27px -8px #a31925, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  --boxShadow: 0px 0px 0px 5px #a0a0a0, inset 0px 10px 27px -8px #141414,
-    inset 0px -10px 27px -8px #a31925, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  --webKitBoxShadow: 0px 0px 0px 5px #a0a0a0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #a31925,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  --boxShadow: 0px 0px 0px 5px #a0a0a0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #a31925,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url(/pics/UCIMG-1372-1.jpg);
+  background-image: url(./pics/UCIMG-1372-1.jpg);
   background-repeat: no-repeat;
   font-family: "Lora", serif;
   background-size: cover;
 }
 #content2 {
-  background-image: url(/pics/pexels-ray-piedra-1565982.jpg);
+  background-image: url(./pics/pexels-ray-piedra-1565982.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
