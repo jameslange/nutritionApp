@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrition App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="scripts.js" defer></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body width="100%" height="100%">
+    <!-- <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header> -->
+    <main class="d-flex flex-column align-items-center h-100">
+      <!-- d-flex
+    flex-column
+    justify-content-center
+    align-items-center
+    position-relative -->
+      <section
+        class="container d-flex flex-column align-items-center vh-100 vw-100"
+      >
+        <div class="d-flex flex-column align-items-center p-2 rounded">
+          <form
+            id="myForm"
+            class="form-inline d-flex rounded flex-column my-lg-0 align-items-center border border-3 border-dark"
+          >
+            <h2 class="p-3">Find your new favorite recipe</h2>
+            <input
+              class="form-control mb-2 w-75"
+              type="search"
+              aria-label="Search"
+              id="userInput"
+            />
+            <button
+              id="myBtn"
+              class="btn btn-outline-success w-25 my-2"
+              type="submit"
+            >
+              <strong>Search</strong>
+            </button>
+          </form>
+          <h5
+            id="learnMore"
+            class="p-3 mt-2 border border-2 border-dark d-none"
+          >
+            <strong>Pick a recipe to find out more!</strong>
+          </h5>
+        </div>
+        <!--Controls-->
+        <div
+          id="carouselControls"
+          class="controls-top d-none d-flex justify-content-center pb-3"
+        >
+          <a
+            class="btn-floating bg-dark"
+            href="#multi-item-example"
+            data-slide="prev"
+            ><i class="bi bi-chevron-compact-left"></i
+          ></a>
+          <a
+            class="btn-floating bg-dark"
+            href="#multi-item-example"
+            data-slide="next"
+            ><i class="bi bi-chevron-compact-right"></i
+          ></a>
+        </div>
+        <!--/.Controls-->
+        <!--Carousel Wrapper-->
+        <div
+          id="multi-item-example"
+          class="carousel slide carousel-multi-item"
+          data-ride="carousel"
+          data-interval="false"
+        >
+          <!--Indicators-->
+          <!-- <ol id="carouselIndication" class="carousel-indicators">
+          <li
+            data-target="#multi-item-example"
+            data-slide-to="0"
+            class="active"
+          >
+            1
+          </li>
+        </ol> 
+
+        JuSt in case
+
+        {/* <a href="${data.hits[i].recipe.url}" class="btn btn-primary position-relative bottom-0">I'm Hungry</a> */}
+        let count =1
+
+        let indicator = document.createElement('li');
+        indicator.innerText=`${count+1}`
+        indicator.setAttribute("data-target", "#multi-item-example");
+        indicator.setAttribute("data-slide-to", `${count}`);
+        carouselIndication.appendChild(indicator);
+        count++; -->
+          <!--/.Indicators-->
+
+          <!--Slides-->
+          <div id="myCarousel" class="carousel-inner" role="listbox">
+            <div id="inner" class="carousel-item active"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-fluid d-none" id="content2">
+        <!---Source: https://getinkahoots.com/nutrition-facts-label/            -->
+
+        <div id="nonQuery" class="d-flex mx-5 px-5 justify-content-md-between">
+          <div id="appendDiv" class="d-flex flex-column">
+            <section class="nutrition-label mt-5 mx-5 col-10">
+              <header class="nutrition-header border-b-lg">
+                <h1 class="nutrition-facts border-b">Nutrition Facts</h1>
+                <div class="servings"></div>
+                <div class="nutrition-row">
+                  <div class="nutrition-column text-md text-bold">
+                    Serving size
+                  </div>
+                  <div
+                    id="servingSize"
+                    class="nutrition-column text-md text-bold text-right"
+                  ></div>
+                </div>
+              </header>
+              <div class="nutrition-row border-b-md">
+                <div class="nutrition-column text-bold">
+                  <div class="text-sm">Amount per serving</div>
+                  <div class="calories">Calories</div>
+                </div>
+                <div
+                  id="caloriesPerServing"
+                  class="nutrition-column calories amount align-bottom text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div class="nutrition-column text-right text-bold text-sm">
+                  % Daily Value *
+                </div>
+              </div>
+              <div id="beginHere" class="nutrition-row border-b">
+                <div id="fatContent" class="nutrition-column">
+                  <!-- <span class="text-bold"></span> -->
+                </div>
+                <div
+                  id="dailyFatPercentage"
+                  class="nutrition-column text-bold text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div class="nutrition-column">
+                  <span id="saturatedFat" class="text-indent"></span>
+                </div>
+                <div
+                  id="dailySFatPercentage"
+                  class="nutrition-column text-bold text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div class="nutrition-column">
+                  <span id="transFat" class="text-indent"></span>
+                </div>
+                <div class="nutrition-column text-bold text-right"></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div class="nutrition-column">
+                  <span id="cholesterol" class="text-bold"></span>
+                </div>
+                <div
+                  id="cholesterolPercentage"
+                  class="nutrition-column text-bold text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div class="nutrition-column">
+                  <span id="sodium" class="text-bold"></span>
+                </div>
+                <div
+                  id="sodiumPercentage"
+                  class="nutrition-column text-bold text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div class="nutrition-column">
+                  <span id="carbs" class="text-bold"></span>
+                </div>
+                <div
+                  id="carbsPercentage"
+                  class="nutrition-column text-bold text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div class="nutrition-column">
+                  <span id="fiber" class="text-indent"></span>
+                </div>
+                <div
+                  id="fiberPercentage"
+                  class="nutrition-column text-bold text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row">
+                <div class="nutrition-column">
+                  <span id="totalSugar" class="text-indent"></span>
+                </div>
+                <div class="nutrition-column text-bold text-right"></div>
+              </div>
+              <!-- <div class="nutrition-row text-indent-md border-t-sm">
+            <div class="nutrition-column">Includes 10g Added Sugars</div>
+            <div class="nutrition-column text-bold text-right">20%</div>
+          </div> -->
+              <div class="nutrition-row border-t-sm border-b-lg">
+                <div class="nutrition-column">
+                  <span id="protein" class="text-bold"></span>
+                </div>
+                <div
+                  id="proteinPercentage"
+                  class="nutrition-column text-bold text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div id="vitaminD" class="nutrition-column"></div>
+                <div
+                  id="vitaminDPercentage"
+                  class="nutrition-column text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div id="calcium" class="nutrition-column"></div>
+                <div
+                  id="calciumPercentage"
+                  class="nutrition-column text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b">
+                <div id="iron" class="nutrition-column"></div>
+                <div
+                  id="ironPercentage"
+                  class="nutrition-column text-right"
+                ></div>
+              </div>
+              <div class="nutrition-row border-b-md">
+                <div id="potassium" class="nutrition-column"></div>
+                <div
+                  id="potassiumPercentage"
+                  class="nutrition-column text-right"
+                ></div>
+              </div>
+              <footer class="nutrition-footer">
+                <div class="asteric">*</div>
+                <div class="footnote">
+                  The % Daily Value (DV) tells you how much a nutrient in a
+                  serving of food contributes to a daily diet. 2,000 calories a
+                  day is used for general nutrition advice.
+                </div>
+              </footer>
+            </section>
+            <aside class="px-3 pt-3 mt-3" id="microNutrients">
+              <h4><strong>Total Additional Nutrients per Serving:</strong></h4>
+              <ul id="nutrientsList"></ul>
+            </aside>
+          </div>
+          <div class="d-flex flex-column justify-content-around">
+            <aside id="ingredientsList" class="mt-5 p-3">
+              <ul class="" id="prepInstructions"></ul>
+            </aside>
+            <div
+              class="backgroundColorDiv d-flex flex-column align-items-center p-3"
+            >
+              <p>
+                Does this recipe tickle your fancy? Head over to the website to
+                check out the instructions!
+              </p>
+              <button
+                id="recipeSiteBtn"
+                class="btn bg-success w-25 my-2"
+                type="submit"
+              >
+                Instructions!
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- /nutrition-label -->
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
