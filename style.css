@@ -12,13 +12,13 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url(./pics/UCIMG-1372-1.jpg);
+  background-image: url(./pics/background.jpg);
   background-repeat: no-repeat;
   font-family: "Lora", serif;
   background-size: cover;
 }
 #content2 {
-  background-image: url(./pics/pexels-ray-piedra-1565982.jpg);
+  background-image: url(./pics/background2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
